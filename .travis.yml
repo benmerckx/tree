@@ -1,0 +1,30 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+# faster builds on new travis setup not using sudo
+sudo: false
+
+# cache vendor dirs
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
+
+install:
+  - travis_retry composer self-update && composer --version
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+before_script:
+  # show some versions and env information
+  - php -r "echo INTL_ICU_VERSION . \"\n\";"
+  - php -r "echo INTL_ICU_DATA_VERSION . \"\n\";"
+
+script:
+  - vendor/bin/codecept run --coverage
