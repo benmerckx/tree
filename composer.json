@@ -1,6 +1,6 @@
 {
     "name" : "sweelix/tree",
-    "description" : "PHP 5.4+ Tree structure management",
+    "description" : "PHP 5.6+ Tree structure management",
     "type" : "library",
     "keywords" : [ "nested", "tree" ],
     "license" : "BSD-3-Clause",
@@ -9,10 +9,10 @@
         "email" : "pgaultier@sweelix.net"
     } ],
     "require" : {
-        "php" : ">=5.4.0"
+        "php" : ">=5.6.0"
     },
     "require-dev" : {
-        "php" : ">=5.4.0",
+        "php" : ">=5.6.0",
         "codeception/codeception": "*"
     },
     "autoload" : {
