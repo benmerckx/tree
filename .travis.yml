@@ -19,6 +19,7 @@ cache:
 
 install:
   - travis_retry composer self-update && composer --version
+  - travis_retry composer install --prefer-dist --no-interaction
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 before_script:
@@ -27,4 +28,4 @@ before_script:
   - php -r "echo INTL_ICU_DATA_VERSION . \"\n\";"
 
 script:
-  - php vendor/bin/codecept run
+  - php vendor/bin/codecept run --coverage
