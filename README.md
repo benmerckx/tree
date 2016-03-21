@@ -4,6 +4,8 @@ Sweelix Node management
 Sweelix node management is an implementation of Rational numbers to key nested sets
 by Dan Hazel (http://arxiv.org/abs/0806.3115).
 
+[![Build Status](https://travis-ci.org/pgaultier/tree.svg?branch=master)](https://travis-ci.org/pgaultier/tree)
+
 Installation
 ------------
 
