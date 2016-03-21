@@ -1,0 +1,23 @@
+{
+    "name" : "sweelix/tree",
+    "description" : "PHP 5.4+ Tree structure management",
+    "type" : "library",
+    "keywords" : [ "nested", "tree" ],
+    "license" : "BSD-3-Clause",
+    "authors" : [ {
+        "name" : "Philippe Gaultier",
+        "email" : "pgaultier@sweelix.net"
+    } ],
+    "require" : {
+        "php" : ">=5.4.0"
+    },
+    "require-dev" : {
+        "php" : ">=5.4.0",
+        "codeception/codeception": "*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "sweelix\\tree\\" : "src"
+        }
+    }
+}
