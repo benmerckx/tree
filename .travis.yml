@@ -19,7 +19,7 @@ cache:
 
 install:
   - travis_retry composer self-update && composer --version
-  - travis_retry composer install --prefer-dist --no-interaction
+  - travis_retry composer install --no-interaction
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 before_script:
