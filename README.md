@@ -5,7 +5,18 @@ Sweelix node management is an implementation of Rational numbers to key nested s
 by Dan Hazel (http://arxiv.org/abs/0806.3115).
 
 [![Latest Stable Version](https://poser.pugx.org/sweelix/tree/v/stable)](https://packagist.org/packages/sweelix/tree)
+
+
+### Stable release
+
 [![Build Status](https://travis-ci.org/pgaultier/tree.svg?branch=master)](https://travis-ci.org/pgaultier/tree)
+[![Code Coverage](https://scrutinizer-ci.com/g/pgaultier/tree/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pgaultier/tree/?branch=master)
+
+### Next release
+
+[![Build Status](https://travis-ci.org/pgaultier/tree.svg?branch=devel)](https://travis-ci.org/pgaultier/tree)
+[![Code Coverage](https://scrutinizer-ci.com/g/pgaultier/tree/badges/coverage.png?b=devel)](https://scrutinizer-ci.com/g/pgaultier/tree/?branch=devel)
+
 
 Installation
 ------------
