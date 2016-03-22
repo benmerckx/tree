@@ -10,6 +10,7 @@ by Dan Hazel (http://arxiv.org/abs/0806.3115).
 [![Code Coverage](https://scrutinizer-ci.com/g/pgaultier/tree/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pgaultier/tree/?branch=master)
 [![License](https://poser.pugx.org/sweelix/tree/license)](https://packagist.org/packages/sweelix/tree)
 
+[![Build Status](https://img.shields.io/badge/unstable-devel-yellowgreen.svg)](https://packagist.org/packages/sweelix/tree)
 [![Build Status](https://travis-ci.org/pgaultier/tree.svg?branch=devel)](https://travis-ci.org/pgaultier/tree)
 [![Code Coverage](https://scrutinizer-ci.com/g/pgaultier/tree/badges/coverage.png?b=devel)](https://scrutinizer-ci.com/g/pgaultier/tree/?branch=devel)
 
