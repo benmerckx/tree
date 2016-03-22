@@ -113,5 +113,12 @@ class NodeTest extends PHPUnit_Framework_TestCase
         $node = Node::createFromPath('5.6.7.1');
         $node->move('5.6', '3.6', -1);
         $this->assertEquals('3.6.6.1', $node->getPath());
+
+        $node = Node::createFromPath('1.1.2');
+        $this->assertFalse($node->canMove('1.1', '1.1.1'));
+        $this->assertFalse($node->move('1.1', '1.1.1', 0));
+        $this->assertTrue($node->canMove('1.1', '1.3'));
+        $this->assertTrue($node->move('1.1', '1.3', 0));
+
     }
 }
