@@ -39,7 +39,7 @@ trait NodeTrait
     protected $nodePath;
 
     /**
-     * @var array node path in matrix notation
+     * @var Matrix node path in matrix notation
      */
     protected $nodeMatrix;
 

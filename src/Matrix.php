@@ -50,8 +50,6 @@ class Matrix
      */
     public $d;
 
-    private $determinant;
-
     /**
      * Matrix constructor.
      * @param array $data array must be in format [a, b, c, d]

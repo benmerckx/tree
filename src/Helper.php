@@ -26,8 +26,12 @@ namespace sweelix\tree;
  */
 class Helper
 {
-    // MatrixNode helpers
-
+    /**
+     * @param Matrix $fromMatrix where we should detach the node
+     * @param Matrix $toMatrix where to re attach the node
+     * @param integer $bump define if we have to shift node number
+     * @return Matrix
+     */
     public static function buildMoveMatrix(Matrix $fromMatrix, Matrix $toMatrix, $bump = 0)
     {
         $from = clone $fromMatrix;
@@ -42,7 +46,7 @@ class Helper
 
     /**
      * @param string $path path in dot notation
-     * @return array matrix notation
+     * @return Matrix matrix notation
      * @since XXX
      */
     public static function convertPathToMatrix($path)
@@ -59,7 +63,7 @@ class Helper
     }
 
     /**
-     * @param array $matrix path in matrix notation
+     * @param Matrix $matrix path in matrix notation
      * @return string dot notation
      * @since XXX
      */
@@ -77,8 +81,8 @@ class Helper
 
     /**
      * Extract parent matrix from matrix. null if current matrix is root
-     * @param array $matrix
-     * @return array|null
+     * @param Matrix $matrix
+     * @return Matrix|null
      * @since XXX
      */
     public static function extractParentMatrixFromMatrix(Matrix $matrix)
@@ -95,6 +99,10 @@ class Helper
         return $parentMatrix;
     }
 
+    /**
+     * @param Matrix|string $element full path in dot notation or in Matrix notation
+     * @return integer
+     */
     public static function getLastSegment($element)
     {
         if ($element instanceof Matrix) {
@@ -106,6 +114,11 @@ class Helper
         return $lastSegment;
     }
 
+    /**
+     * @param integer $segment segment number
+     * @return Matrix
+     * @throws InvalidSegmentException
+     */
     public static function buildSegmentMatrix($segment)
     {
         if ($segment <= 0) {
@@ -117,6 +130,10 @@ class Helper
         ]);
     }
 
+    /**
+     * @param integer $offset bump size
+     * @return Matrix
+     */
     public static function buildBumpMatrix($offset = 0)
     {
         return new Matrix([
