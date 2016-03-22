@@ -44,7 +44,7 @@ class Node
 
     /**
      * Create a node object from a matrix
-     * @param array $matrix node path in matrix notation [a, b, c, d]
+     * @param array|Matrix $matrix node path in matrix notation [a, b, c, d]
      * @return static
      * @since XXX
      */

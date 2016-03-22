@@ -107,21 +107,38 @@ trait NodeTrait
     }
 
     /**
+     * Check if we can perform selected move
+     * @param string $fromPath original Path
+     * @param string $toPath new Path
+     * @return bool
+     * @since XXX
+     */
+    public function canMove($fromPath, $toPath)
+    {
+        return (strncmp($fromPath, $toPath, strlen($fromPath)) !== 0);
+    }
+
+    /**
      * Move current node from one path to another
-     * @param $fromPath
-     * @param $toPath
-     * @param int $bump
+     * @param string $fromPath original Path
+     * @param string $toPath new Path
+     * @param int $bump offset if we need to re-key the path
+     * @return boolean
      * @since XXX
      */
     public function move($fromPath, $toPath, $bump = 0)
     {
-        $fromMatrix = Helper::convertPathToMatrix($fromPath);
-        $toMatrix = Helper::convertPathToMatrix($toPath);
-        $moveMatrix = Helper::buildMoveMatrix($fromMatrix, $toMatrix, $bump);
-        $moveMatrix->multiply($this->nodeMatrix);
-        $this->nodeMatrix = $moveMatrix;
-        // $this->nodeMatrix = Matrix::multiplyMatrices($moveMatrix, $this->nodeMatrix);
-        $this->nodePath = Helper::convertMatrixToPath($this->nodeMatrix);
+        // cannot move into self tree
+        $status = $this->canMove($fromPath, $toPath);
+        if($status === true) {
+            $fromMatrix = Helper::convertPathToMatrix($fromPath);
+            $toMatrix = Helper::convertPathToMatrix($toPath);
+            $moveMatrix = Helper::buildMoveMatrix($fromMatrix, $toMatrix, $bump);
+            $moveMatrix->multiply($this->nodeMatrix);
+            $this->nodeMatrix = $moveMatrix;
+            $this->nodePath = Helper::convertMatrixToPath($this->nodeMatrix);
+        }
+        return $status;
     }
     
 }
