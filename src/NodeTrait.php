@@ -130,7 +130,7 @@ trait NodeTrait
     {
         // cannot move into self tree
         $status = $this->canMove($fromPath, $toPath);
-        if($status === true) {
+        if ($status === true) {
             $fromMatrix = Helper::convertPathToMatrix($fromPath);
             $toMatrix = Helper::convertPathToMatrix($toPath);
             $moveMatrix = Helper::buildMoveMatrix($fromMatrix, $toMatrix, $bump);
